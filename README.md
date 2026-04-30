@@ -22,7 +22,14 @@ This project asks how combinations of base/chat TinyLlama checkpoints and text/i
 
 The benchmark evaluates six model configurations:
 
-![Fine-tuning strategy matrix](assets/fine_tuning_strategy_matrix.png)
+| ID | Configuration | Starting Model | Training Path | Evaluation Focus |
+|---|---|---|---|---|
+| `model_0` | Base -> Alpaca -> QA | TinyLlama base | Alpaca instruction tuning followed by PubMedQA QA tuning | Answer |
+| `model_1` | Base -> Alpaca -> Context | TinyLlama base | Alpaca instruction tuning followed by PubMedQA context tuning | Context |
+| `model_2` | QA -> Context | TinyLlama adapter chain | PubMedQA QA tuning followed by PubMedQA context tuning | Mixed |
+| `model_3` | Chat -> QA | TinyLlama Chat | PubMedQA QA instruction tuning | Answer |
+| `model_4` | Base -> Context | TinyLlama base | PubMedQA context tuning | Context |
+| `model_5` | Base -> QA | TinyLlama base | PubMedQA QA instruction tuning | Answer |
 
 The project uses two evaluation modes:
 

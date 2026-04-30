@@ -72,39 +72,9 @@ def plot_bertscore(df: pd.DataFrame) -> None:
     plt.close(fig)
 
 
-def plot_experiment_matrix() -> None:
-    registry = pd.read_csv(RESULTS / "model_registry.csv")
-    fig, ax = plt.subplots(figsize=(12, 4.8), dpi=180)
-    ax.axis("off")
-    ax.set_title("Fine-Tuning Strategy Matrix", fontsize=16, fontweight="bold", pad=18)
-
-    table_data = registry[["model_id", "label", "starting_model", "evaluation_focus"]].values.tolist()
-    table = ax.table(
-        cellText=table_data,
-        colLabels=["ID", "Configuration", "Starting model", "Eval focus"],
-        cellLoc="left",
-        colLoc="left",
-        colWidths=[0.09, 0.38, 0.28, 0.15],
-        loc="center",
-    )
-    table.auto_set_font_size(False)
-    table.set_fontsize(9)
-    table.scale(1, 1.55)
-    for (row, _), cell in table.get_celld().items():
-        cell.set_edgecolor("#d0d7de")
-        if row == 0:
-            cell.set_facecolor("#1f4e79")
-            cell.set_text_props(color="white", weight="bold")
-        elif row % 2 == 0:
-            cell.set_facecolor("#f6f8fa")
-    fig.savefig(ASSETS / "fine_tuning_strategy_matrix.png", bbox_inches="tight", facecolor="white")
-    plt.close(fig)
-
-
 def main() -> None:
     ASSETS.mkdir(exist_ok=True)
     df = load_metrics()
-    plot_experiment_matrix()
     plot_task_metrics(df, "answer", "answer_metrics.png")
     plot_task_metrics(df, "context", "context_metrics.png")
     plot_bertscore(df)
