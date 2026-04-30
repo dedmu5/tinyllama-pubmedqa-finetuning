@@ -31,6 +31,8 @@ The benchmark evaluates six model configurations:
 | `model_4` | Base -> Context | TinyLlama base | PubMedQA context tuning | Context |
 | `model_5` | Base -> QA | TinyLlama base | PubMedQA QA instruction tuning | Answer |
 
+![Fine-tuning experiment flows](assets/fine_tuning_experiment_flows.png)
+
 The project uses two evaluation modes:
 
 1. **Answer generation:** generate an answer for a biomedical question.
@@ -38,8 +40,15 @@ The project uses two evaluation modes:
 
 Training data was derived from PubMedQA:
 
-- **Text-completion data:** concatenated PubMedQA contexts, formatted as `{"text": ...}`.
-- **Instruction data:** medical QA examples, formatted with an instruction, input question and long-form answer.
+| Dataset / Format | Source | Prompt Shape | Purpose |
+|---|---|---|---|
+| PubMedQA context text | Concatenated PubMedQA biomedical contexts | `<context prefix>` | Text-completion fine-tuning and context continuation evaluation |
+| PubMedQA instruction QA | PubMedQA questions and long answers | `Question: <question>\nAnswer:` | Biomedical answer-generation fine-tuning and evaluation |
+| Alpaca instruction data | General instruction-following examples | Instruction/input/output triplets | Intermediate instruction alignment before PubMedQA specialization |
+
+The evaluation workflow compares each tuned model under both prompt styles, generates text, and computes BLEU, ROUGE and BERTScore against the corresponding PubMedQA references.
+
+![Benchmark workflow](assets/benchmark_workflow.png)
 
 The training stack used TinyLlama, QLoRA adapters and Axolotl. Sanitized Axolotl configs are included in `configs/`; local checkpoint paths, Colab/Drive-specific paths and large adapter weights were intentionally not included.
 
@@ -67,6 +76,16 @@ For context continuation, the best configuration depended on the metric:
 BERTScore is shown separately because it operates on a different scale from BLEU/ROUGE overlap metrics:
 
 ![BERTScore F1](assets/bertscore_f1.png)
+
+## Qualitative Examples
+
+The original notebook also compared sample generations across prompt types. The table below keeps those observations searchable and easy to review:
+
+| Prompt Type | Example Input | Representative Output Behavior |
+|---|---|---|
+| Answer generation | `Question: What is the role of mitochondria in cellular respiration? Answer:` | QA-tuned models produced direct biomedical-style answers, but some weaker configurations returned incomplete or blank generations. |
+| Context continuation | `Assessment of visual acuity ...` | Context-tuned models were better at continuing biomedical prose, including study-style phrasing and clinical terminology. |
+| Failure case | PubMedQA-style QA or continuation prompt | Some configurations generated degenerate repetition, citation fragments, or prompt-format artifacts, which is why qualitative inspection was paired with automatic metrics. |
 
 ## Repository Structure
 
@@ -154,6 +173,6 @@ python -m llm_ft_eval.evaluate \
 
 - Re-run all configurations with a larger and fixed PubMedQA evaluation split.
 - Add exact Axolotl configs for every model variant once checkpoint lineage is fully standardized.
-- Add qualitative examples comparing generated answers across configurations.
+- Add a larger curated qualitative comparison across all model configurations.
 - Evaluate factuality and medical correctness beyond lexical/embedding similarity metrics.
 - Compare TinyLlama against stronger small models and more recent instruction-tuned checkpoints.
