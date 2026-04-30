@@ -1,4 +1,4 @@
-# TinyLlama PubMedQA Fine-Tuning Benchmark
+# LLM Fine-Tuning Path Benchmark (TinyLlama + QLoRA/Axolotl)
 
 This project studies a practical fine-tuning question: when adapting a small LLM to biomedical generation, is it better to start from a base model, a chat model, a general instruction-tuned model, or a domain-specific adapter chain?
 
