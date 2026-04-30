@@ -1,0 +1,7 @@
+model_id,label,starting_model,training_path,evaluation_focus
+model_0,Base -> Alpaca -> QA,TinyLlama base,Alpaca instruction tuning followed by PubMedQA QA tuning,answer
+model_1,Base -> Alpaca -> Context,TinyLlama base,Alpaca instruction tuning followed by PubMedQA context tuning,context
+model_2,QA -> Context,TinyLlama adapter chain,PubMedQA QA tuning followed by PubMedQA context tuning,mixed
+model_3,Chat -> QA,TinyLlama Chat,PubMedQA QA instruction tuning,answer
+model_4,Base -> Context,TinyLlama base,PubMedQA context tuning,context
+model_5,Base -> QA,TinyLlama base,PubMedQA QA instruction tuning,answer

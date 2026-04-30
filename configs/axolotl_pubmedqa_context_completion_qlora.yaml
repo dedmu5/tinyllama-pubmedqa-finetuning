@@ -1,0 +1,48 @@
+# Axolotl config matching the PubMedQA context-completion QLoRA adapters.
+# Large adapter weights are intentionally not stored in this repository.
+
+base_model: TinyLlama/TinyLlama-1.1B-Chat-v0.1
+model_type: LlamaForCausalLM
+tokenizer_type: LlamaTokenizer
+
+load_in_8bit: false
+load_in_4bit: true
+strict: false
+
+datasets:
+  - path: data/processed/pubmedqa_context_completion.jsonl
+    type: completion
+dataset_prepared_path:
+val_set_size: 0.05
+output_dir: outputs/pubmedqa-context-qlora
+
+adapter: qlora
+lora_model_dir:
+sequence_len: 4096
+sample_packing: false
+eval_sample_packing: false
+pad_to_sequence_len: false
+
+lora_r: 32
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_linear: true
+
+gradient_accumulation_steps: 4
+micro_batch_size: 8
+num_epochs: 4
+optimizer: paged_adamw_32bit
+lr_scheduler: cosine
+learning_rate: 0.0002
+
+train_on_inputs: false
+group_by_length: false
+bf16: false
+fp16:
+tf32: false
+gradient_checkpointing: true
+logging_steps: 1
+warmup_steps: 10
+evals_per_epoch: 4
+saves_per_epoch: 1
+weight_decay: 0.0

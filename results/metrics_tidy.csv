@@ -1,0 +1,145 @@
+task,split,metric,metric_label,model_id,label,score
+answer,train,mean_bleu,BLEU,model_0,Base -> Alpaca -> QA,0.0147333999480422
+answer,train,mean_bleu,BLEU,model_1,Base -> Alpaca -> Context,0.004175107879039
+answer,train,mean_bleu,BLEU,model_2,QA -> Context,0.0027111687618775
+answer,train,mean_bleu,BLEU,model_3,Chat -> QA,0.0054381040979732
+answer,train,mean_bleu,BLEU,model_4,Base -> Context,0.0018827854096032
+answer,train,mean_bleu,BLEU,model_5,Base -> QA,0.0204795719825615
+answer,train,mean_rouge1,ROUGE-1,model_0,Base -> Alpaca -> QA,0.2569950972201018
+answer,train,mean_rouge1,ROUGE-1,model_1,Base -> Alpaca -> Context,0.1838390205048148
+answer,train,mean_rouge1,ROUGE-1,model_2,QA -> Context,0.0766705581075042
+answer,train,mean_rouge1,ROUGE-1,model_3,Chat -> QA,0.0867338972919497
+answer,train,mean_rouge1,ROUGE-1,model_4,Base -> Context,0.0605078466676728
+answer,train,mean_rouge1,ROUGE-1,model_5,Base -> QA,0.2344826680509412
+answer,train,mean_rougeL,ROUGE-L,model_0,Base -> Alpaca -> QA,0.1760272134119964
+answer,train,mean_rougeL,ROUGE-L,model_1,Base -> Alpaca -> Context,0.1259481693932643
+answer,train,mean_rougeL,ROUGE-L,model_2,QA -> Context,0.0639042461473893
+answer,train,mean_rougeL,ROUGE-L,model_3,Chat -> QA,0.0681621395755271
+answer,train,mean_rougeL,ROUGE-L,model_4,Base -> Context,0.0535732753047987
+answer,train,mean_rougeL,ROUGE-L,model_5,Base -> QA,0.1788125865192981
+answer,train,mean_rouge3,ROUGE-3,model_0,Base -> Alpaca -> QA,0.0241038857647833
+answer,train,mean_rouge3,ROUGE-3,model_1,Base -> Alpaca -> Context,0.0097206855237797
+answer,train,mean_rouge3,ROUGE-3,model_2,QA -> Context,0.0048318439319993
+answer,train,mean_rouge3,ROUGE-3,model_3,Chat -> QA,0.0052696287901018
+answer,train,mean_rouge3,ROUGE-3,model_4,Base -> Context,0.0028286568687244
+answer,train,mean_rouge3,ROUGE-3,model_5,Base -> QA,0.0319734204795858
+answer,train,mean_rouge4,ROUGE-4,model_0,Base -> Alpaca -> QA,0.0059551234989831
+answer,train,mean_rouge4,ROUGE-4,model_1,Base -> Alpaca -> Context,0.0016877637130801
+answer,train,mean_rouge4,ROUGE-4,model_2,QA -> Context,0.0014137802356262
+answer,train,mean_rouge4,ROUGE-4,model_3,Chat -> QA,0.0013057287679427
+answer,train,mean_rouge4,ROUGE-4,model_4,Base -> Context,0.000670054820754
+answer,train,mean_rouge4,ROUGE-4,model_5,Base -> QA,0.0126939086172802
+answer,train,mean_bertscore_f1,BERTScore F1,model_0,Base -> Alpaca -> QA,0.8725576003392538
+answer,train,mean_bertscore_f1,BERTScore F1,model_1,Base -> Alpaca -> Context,0.8663403987884521
+answer,train,mean_bertscore_f1,BERTScore F1,model_2,QA -> Context,0.7691887895266215
+answer,train,mean_bertscore_f1,BERTScore F1,model_3,Chat -> QA,0.7764474550882975
+answer,train,mean_bertscore_f1,BERTScore F1,model_4,Base -> Context,0.7506378451983134
+answer,train,mean_bertscore_f1,BERTScore F1,model_5,Base -> QA,0.8686478734016418
+answer,test,mean_bleu,BLEU,model_0,Base -> Alpaca -> QA,0.020646073637743
+answer,test,mean_bleu,BLEU,model_1,Base -> Alpaca -> Context,0.0198846814525185
+answer,test,mean_bleu,BLEU,model_2,QA -> Context,0.0042682361195118
+answer,test,mean_bleu,BLEU,model_3,Chat -> QA,0.0058865142915705
+answer,test,mean_bleu,BLEU,model_4,Base -> Context,0.0055857211607732
+answer,test,mean_bleu,BLEU,model_5,Base -> QA,0.0228704037645642
+answer,test,mean_rouge1,ROUGE-1,model_0,Base -> Alpaca -> QA,0.2902453935318522
+answer,test,mean_rouge1,ROUGE-1,model_1,Base -> Alpaca -> Context,0.2651573163566352
+answer,test,mean_rouge1,ROUGE-1,model_2,QA -> Context,0.0722811940813783
+answer,test,mean_rouge1,ROUGE-1,model_3,Chat -> QA,0.0739466461484133
+answer,test,mean_rouge1,ROUGE-1,model_4,Base -> Context,0.0719722412330769
+answer,test,mean_rouge1,ROUGE-1,model_5,Base -> QA,0.2979723508732188
+answer,test,mean_rougeL,ROUGE-L,model_0,Base -> Alpaca -> QA,0.2028208891512721
+answer,test,mean_rougeL,ROUGE-L,model_1,Base -> Alpaca -> Context,0.2072059424664362
+answer,test,mean_rougeL,ROUGE-L,model_2,QA -> Context,0.0572331693986179
+answer,test,mean_rougeL,ROUGE-L,model_3,Chat -> QA,0.0609723207037362
+answer,test,mean_rougeL,ROUGE-L,model_4,Base -> Context,0.0604045395445542
+answer,test,mean_rougeL,ROUGE-L,model_5,Base -> QA,0.2099890542206037
+answer,test,mean_rouge3,ROUGE-3,model_0,Base -> Alpaca -> QA,0.0365150050894373
+answer,test,mean_rouge3,ROUGE-3,model_1,Base -> Alpaca -> Context,0.044527356196848
+answer,test,mean_rouge3,ROUGE-3,model_2,QA -> Context,0.0056595343602462
+answer,test,mean_rouge3,ROUGE-3,model_3,Chat -> QA,0.0065937771483172
+answer,test,mean_rouge3,ROUGE-3,model_4,Base -> Context,0.0068538728548978
+answer,test,mean_rouge3,ROUGE-3,model_5,Base -> QA,0.0370131133189902
+answer,test,mean_rouge4,ROUGE-4,model_0,Base -> Alpaca -> QA,0.012499037943508
+answer,test,mean_rouge4,ROUGE-4,model_1,Base -> Alpaca -> Context,0.0210690353747857
+answer,test,mean_rouge4,ROUGE-4,model_2,QA -> Context,0.0024377883366515
+answer,test,mean_rouge4,ROUGE-4,model_3,Chat -> QA,0.00323094116061
+answer,test,mean_rouge4,ROUGE-4,model_4,Base -> Context,0.0030198960144513
+answer,test,mean_rouge4,ROUGE-4,model_5,Base -> QA,0.0146742068573054
+answer,test,mean_bertscore_f1,BERTScore F1,model_0,Base -> Alpaca -> QA,0.8765887260437012
+answer,test,mean_bertscore_f1,BERTScore F1,model_1,Base -> Alpaca -> Context,0.8773336172103882
+answer,test,mean_bertscore_f1,BERTScore F1,model_2,QA -> Context,0.7674198309580486
+answer,test,mean_bertscore_f1,BERTScore F1,model_3,Chat -> QA,0.7921838204065959
+answer,test,mean_bertscore_f1,BERTScore F1,model_4,Base -> Context,0.7513758182525635
+answer,test,mean_bertscore_f1,BERTScore F1,model_5,Base -> QA,0.8778011520703634
+context,train,mean_bleu,BLEU,model_0,Base -> Alpaca -> QA,0.0020209607890511
+context,train,mean_bleu,BLEU,model_1,Base -> Alpaca -> Context,0.0151178790093558
+context,train,mean_bleu,BLEU,model_2,QA -> Context,0.0244897322974824
+context,train,mean_bleu,BLEU,model_3,Chat -> QA,0.0116305053579094
+context,train,mean_bleu,BLEU,model_4,Base -> Context,0.0194730626666015
+context,train,mean_bleu,BLEU,model_5,Base -> QA,0.0066698109092728
+context,train,mean_rouge1,ROUGE-1,model_0,Base -> Alpaca -> QA,0.1565810808054136
+context,train,mean_rouge1,ROUGE-1,model_1,Base -> Alpaca -> Context,0.1659717652701448
+context,train,mean_rouge1,ROUGE-1,model_2,QA -> Context,0.174201544267963
+context,train,mean_rouge1,ROUGE-1,model_3,Chat -> QA,0.1605286238984632
+context,train,mean_rouge1,ROUGE-1,model_4,Base -> Context,0.1934563406419641
+context,train,mean_rouge1,ROUGE-1,model_5,Base -> QA,0.1964686300144501
+context,train,mean_rougeL,ROUGE-L,model_0,Base -> Alpaca -> QA,0.1254015007471416
+context,train,mean_rougeL,ROUGE-L,model_1,Base -> Alpaca -> Context,0.1333148245645158
+context,train,mean_rougeL,ROUGE-L,model_2,QA -> Context,0.1265443802502701
+context,train,mean_rougeL,ROUGE-L,model_3,Chat -> QA,0.1251434428624281
+context,train,mean_rougeL,ROUGE-L,model_4,Base -> Context,0.1342023775351678
+context,train,mean_rougeL,ROUGE-L,model_5,Base -> QA,0.1299292749380376
+context,train,mean_rouge3,ROUGE-3,model_0,Base -> Alpaca -> QA,0.0448806293327853
+context,train,mean_rouge3,ROUGE-3,model_1,Base -> Alpaca -> Context,0.0606931121851504
+context,train,mean_rouge3,ROUGE-3,model_2,QA -> Context,0.0269917126640625
+context,train,mean_rouge3,ROUGE-3,model_3,Chat -> QA,0.0122307269615021
+context,train,mean_rouge3,ROUGE-3,model_4,Base -> Context,0.0174616732655287
+context,train,mean_rouge3,ROUGE-3,model_5,Base -> QA,0.0203061650729439
+context,train,mean_rouge4,ROUGE-4,model_0,Base -> Alpaca -> QA,0.0303874807528354
+context,train,mean_rouge4,ROUGE-4,model_1,Base -> Alpaca -> Context,0.049765789928279
+context,train,mean_rouge4,ROUGE-4,model_2,QA -> Context,0.0179930048581986
+context,train,mean_rouge4,ROUGE-4,model_3,Chat -> QA,0.0047540201999084
+context,train,mean_rouge4,ROUGE-4,model_4,Base -> Context,0.0112945046085367
+context,train,mean_rouge4,ROUGE-4,model_5,Base -> QA,0.0105620226535794
+context,train,mean_bertscore_f1,BERTScore F1,model_0,Base -> Alpaca -> QA,0.8357524434725444
+context,train,mean_bertscore_f1,BERTScore F1,model_1,Base -> Alpaca -> Context,0.8237491130828858
+context,train,mean_bertscore_f1,BERTScore F1,model_2,QA -> Context,0.7623948931694031
+context,train,mean_bertscore_f1,BERTScore F1,model_3,Chat -> QA,0.7772433678309123
+context,train,mean_bertscore_f1,BERTScore F1,model_4,Base -> Context,0.7748117407162984
+context,train,mean_bertscore_f1,BERTScore F1,model_5,Base -> QA,0.8315806905428569
+context,test,mean_bleu,BLEU,model_0,Base -> Alpaca -> QA,0.0096358273437063
+context,test,mean_bleu,BLEU,model_1,Base -> Alpaca -> Context,0.0142971709708244
+context,test,mean_bleu,BLEU,model_2,QA -> Context,0.0332517183131246
+context,test,mean_bleu,BLEU,model_3,Chat -> QA,0.0141496637542388
+context,test,mean_bleu,BLEU,model_4,Base -> Context,0.0226096723531762
+context,test,mean_bleu,BLEU,model_5,Base -> QA,0.0047896300769004
+context,test,mean_rouge1,ROUGE-1,model_0,Base -> Alpaca -> QA,0.1641616652199262
+context,test,mean_rouge1,ROUGE-1,model_1,Base -> Alpaca -> Context,0.181227318143242
+context,test,mean_rouge1,ROUGE-1,model_2,QA -> Context,0.1952117020515133
+context,test,mean_rouge1,ROUGE-1,model_3,Chat -> QA,0.141980328664064
+context,test,mean_rouge1,ROUGE-1,model_4,Base -> Context,0.2261197296399082
+context,test,mean_rouge1,ROUGE-1,model_5,Base -> QA,0.150186651182484
+context,test,mean_rougeL,ROUGE-L,model_0,Base -> Alpaca -> QA,0.1279094691030278
+context,test,mean_rougeL,ROUGE-L,model_1,Base -> Alpaca -> Context,0.1339189569556577
+context,test,mean_rougeL,ROUGE-L,model_2,QA -> Context,0.1445900649574619
+context,test,mean_rougeL,ROUGE-L,model_3,Chat -> QA,0.1218089220977175
+context,test,mean_rougeL,ROUGE-L,model_4,Base -> Context,0.161943752120663
+context,test,mean_rougeL,ROUGE-L,model_5,Base -> QA,0.1204327226852241
+context,test,mean_rouge3,ROUGE-3,model_0,Base -> Alpaca -> QA,0.0553036698005488
+context,test,mean_rouge3,ROUGE-3,model_1,Base -> Alpaca -> Context,0.0453808050213313
+context,test,mean_rouge3,ROUGE-3,model_2,QA -> Context,0.0315398500058179
+context,test,mean_rouge3,ROUGE-3,model_3,Chat -> QA,0.0142599949735722
+context,test,mean_rouge3,ROUGE-3,model_4,Base -> Context,0.0225389011936998
+context,test,mean_rouge3,ROUGE-3,model_5,Base -> QA,0.0496143195730083
+context,test,mean_rouge4,ROUGE-4,model_0,Base -> Alpaca -> QA,0.0452760726093613
+context,test,mean_rouge4,ROUGE-4,model_1,Base -> Alpaca -> Context,0.0349956291666345
+context,test,mean_rouge4,ROUGE-4,model_2,QA -> Context,0.0252907756701115
+context,test,mean_rouge4,ROUGE-4,model_3,Chat -> QA,0.0081484609462829
+context,test,mean_rouge4,ROUGE-4,model_4,Base -> Context,0.013381592540513
+context,test,mean_rouge4,ROUGE-4,model_5,Base -> QA,0.0407915763366397
+context,test,mean_bertscore_f1,BERTScore F1,model_0,Base -> Alpaca -> QA,0.8330725828806559
+context,test,mean_bertscore_f1,BERTScore F1,model_1,Base -> Alpaca -> Context,0.7859500924746196
+context,test,mean_bertscore_f1,BERTScore F1,model_2,QA -> Context,0.7685592929522197
+context,test,mean_bertscore_f1,BERTScore F1,model_3,Chat -> QA,0.7725019733111064
+context,test,mean_bertscore_f1,BERTScore F1,model_4,Base -> Context,0.7820322632789611
+context,test,mean_bertscore_f1,BERTScore F1,model_5,Base -> QA,0.8224420468012492
